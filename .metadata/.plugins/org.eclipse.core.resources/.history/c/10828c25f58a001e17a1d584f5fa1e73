@@ -1,0 +1,17 @@
+import java.util.HashMap;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		String str = "Anup Arun Kanere";
+		str = str.toLowerCase().replaceAll("\\s", "");
+		HashMap<Character , Integer> hm = new HashMap<>();
+		
+		for (char  ch : str.toCharArray()) {
+			if()
+		}
+		
+
+	}
+
+}

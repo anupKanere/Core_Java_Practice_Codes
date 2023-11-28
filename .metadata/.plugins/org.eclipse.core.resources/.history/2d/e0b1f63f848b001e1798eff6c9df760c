@@ -1,0 +1,24 @@
+package com.app;
+
+public class WideningAndAutoboxing {
+	public static void methodOne(Integer l) {
+		System.out.println("AutoBoxing dominates");
+	}
+
+	public static void methodOne(long l) {
+		System.out.println("widening dominates");
+	}
+	
+	public static void methodOne(long... l) {
+		System.out.println("var-args dominates");
+	}
+
+	public static void main(String[] args) {
+		int x = 10;
+		methodOne(x);
+	}
+
+}
+/*
+ * widening dominates over Auto-boxing
+ */

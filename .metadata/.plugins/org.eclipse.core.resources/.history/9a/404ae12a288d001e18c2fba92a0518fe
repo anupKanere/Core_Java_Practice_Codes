@@ -1,0 +1,59 @@
+package com.app;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.WeakHashMap;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class WeakHashMapDemo {
+	public static void main(String[] args) throws InterruptedException {
+		
+		HashMap<Temp , String> hm = new HashMap();
+		Temp t1 = new Temp();
+		hm.put(t1, "Durga");
+		System.out.println(hm);
+		t1 = null;
+		System.gc();
+		
+		Thread.sleep(3000);
+		System.out.println(hm);
+		
+		System.out.println("-----------------------");
+		
+		WeakHashMap<Temp , String> whm = new WeakHashMap<>();
+		Temp t2 = new Temp();
+		whm.put(t2, "Durga");
+		System.out.println(whm);
+		t2 = null;
+		System.gc();
+		Thread.sleep(3000);
+		System.out.println(whm);
+		
+		ConcurrentHashMap<Integer, String> chm = new ConcurrentHashMap<Integer, String>();
+		chm.put(1, "Anup");
+		chm.put(2, "Adarsh");
+		chm.put(3, "Pranal");
+		
+		Iterator itr = chm.keySet().iterator();
+		while(itr.hasNext())
+		{
+			System.out.println(itr.next());
+			if(chm.get(1) != null)
+				chm.put(4, "new");
+
+		}
+		
+		System.out.println(chm);
+
+	}
+}
+
+class Temp {
+	public String toString() {
+		return "temp";
+	}
+
+	public void finalize() {
+		System.out.println("finalize() Called");
+	}
+}

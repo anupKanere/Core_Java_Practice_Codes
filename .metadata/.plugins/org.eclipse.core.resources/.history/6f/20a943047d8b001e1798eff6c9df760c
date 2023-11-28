@@ -1,0 +1,16 @@
+package com.app;
+
+import java.util.*;
+
+public class AutoBoxingAndUnboxingDemo {
+	public static void main(String[] args) {
+		Integer x = new Integer(10);
+		Integer y = x;
+		System.out.println(x == y);// true
+		
+		System.out.println("-----------------------------");
+		Integer x=10;
+		Integer y=10;
+		System.out.println(x==y);//true
+	}
+}

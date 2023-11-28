@@ -1,0 +1,16 @@
+package com.app;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Float i1 = 100.0f;
+		Float i2 = 100.0f;
+		System.out.println(i1 == i2 );
+		
+		Float a1 = 200.0f;
+		Float a2 = 200.0f;
+		System.out.println(a1 == a2);
+
+	}
+
+}

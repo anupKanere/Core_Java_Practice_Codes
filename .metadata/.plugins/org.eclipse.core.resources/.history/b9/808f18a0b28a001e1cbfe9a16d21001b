@@ -1,0 +1,18 @@
+package com.app;
+
+public interface Test {
+
+	public void sendEmail(EmailDetails e);
+
+	class EmailDetails implements Test
+	{
+		String from;
+		String to;
+		String subject;
+		@Override
+		public void sendEmail(EmailDetails e) {
+			// TODO Auto-generated method stub
+			
+		}
+	}
+}

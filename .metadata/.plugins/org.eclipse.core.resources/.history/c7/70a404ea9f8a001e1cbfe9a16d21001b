@@ -1,0 +1,18 @@
+package com.app;
+
+public class A {
+	class B {
+		
+		public void method() {
+			System.out.println("Inside inner class C");
+		}
+
+		class C {
+
+			public void method() {
+				System.out.println("Inside inner class C");
+			}
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.app;
+
+import java.util.HashMap;
+import java.util.WeakHashMap;
+
+public class WeakHashMapDemo {
+	public static void main(String[] args) throws InterruptedException {
+		
+		HashMap<Temp , String> hm = new HashMap();
+		Temp t1 = new Temp();
+		hm.put(t1, "Durga");
+		System.out.println(hm);
+		t1 = null;
+		System.gc();
+		Thread.sleep(5000);
+		System.out.println(hm);
+		
+		WeakHashMap<Temp , String> whm = new WeakHashMap<>();
+		Temp t2 = new Temp();
+		whm.put(t2, "Durga");
+		System.out.println(m);
+		t2 = null;
+		System.gc();
+		Thread.sleep(5000);
+		System.out.println(m);
+		
+
+	}
+}
+
+class Temp {
+	public String toString() {
+		return "temp";
+	}
+
+	public void finalize() {
+		System.out.println("finalize() Called");
+	}
+}

@@ -1,0 +1,10 @@
+
+
+interface Left {
+	 void method() {
+		
+	}
+}
+public class InterfaceExample {
+
+}

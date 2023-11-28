@@ -1,0 +1,12 @@
+package com.app;
+
+public class Dog extends Animal {
+//	@Override
+	public static void animalSound() {
+		System.out.println("Dog Barks");
+	}
+	
+	public void specialMethod() {
+		System.out.println("inside dog special method");
+	}
+}

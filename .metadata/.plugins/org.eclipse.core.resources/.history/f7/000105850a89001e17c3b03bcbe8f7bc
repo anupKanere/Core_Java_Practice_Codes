@@ -1,0 +1,18 @@
+
+
+interface Left {
+	 void method();
+}
+
+interface Right{
+	int method();
+}
+public class InterfaceExample implements Left , Right{
+
+	@Override
+	public int method() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

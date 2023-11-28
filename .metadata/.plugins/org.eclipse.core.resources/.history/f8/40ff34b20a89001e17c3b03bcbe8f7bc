@@ -1,0 +1,21 @@
+
+interface Left {
+	 void method();
+}
+
+interface Right{
+	int method();
+}
+public class InterfaceExample implements Left , Right{
+
+	@Override
+	public int method() {
+		return 0;
+	}
+	
+	@Override
+	public void method() {
+		
+	}
+
+}

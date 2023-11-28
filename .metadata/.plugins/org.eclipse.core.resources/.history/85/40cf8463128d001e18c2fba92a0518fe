@@ -1,0 +1,25 @@
+package com.app;
+
+import java.util.HashMap;
+import java.util.IdentityHashMap;
+
+public class Map {
+
+	public static void main(String[] args) {
+		HashMap<Integer , String> hm = new HashMap<>();
+//		Integer i1 = new Integer(10);
+		Integer i1 = 127;
+		Integer i2 = 127;
+//		Integer i2 = new Integer(10);
+		hm.put(i1, "Anup");
+		hm.put(i2, "Kanere");
+		System.out.println(hm);
+		
+		IdentityHashMap<Integer, String> ihm = new IdentityHashMap<Integer, String>();
+		ihm.put(i1, "Anup");
+		ihm.put(i2, "Kanere");
+		System.out.println(ihm);
+
+	}
+
+}

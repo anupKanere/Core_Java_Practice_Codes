@@ -1,0 +1,15 @@
+package com.app;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Animal animal = new Cat();//upcasting
+		animal.animalSound();
+		Cat cat = (Cat)animal;
+		cat.specialMethod();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.app;
+
+public class StringDemo {
+	public static void main(String[] args) {
+		String s1 = new String("bhaskar");
+		 s1 = s1.intern();
+//		System.out.println(s1 == s2); // false
+		String s3 = "bhaskar";
+		System.out.println(s1 == s3);// true
+		s3 = "Anup";
+		System.out.println(s1 == s3);
+	}
+}

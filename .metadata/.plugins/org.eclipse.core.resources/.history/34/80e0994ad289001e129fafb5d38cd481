@@ -1,0 +1,27 @@
+package com.app;
+
+import java.io.PrintWriter;
+
+public class ExceptionHandling {
+
+	public static void main(String[] args) {
+
+		try {
+			System.out.println("Statement 1");
+			System.out.println("Statement 2");
+			int res = 10 / 0;
+//			return;
+			System.out.println("Statement 3");
+
+		} catch (Error e) {
+			System.out.println("inside catch block Cause of Exception : " + e.getMessage());
+
+		} finally {
+			System.out.println("Inside finally block");
+		}
+
+		System.out.println("Outside try-catch block");
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.app;
+
+public class StaticNestedClass {
+
+    public static void main(String[] args) {
+        System.out.println("Inside the main method of the main class.");
+    }
+}
+

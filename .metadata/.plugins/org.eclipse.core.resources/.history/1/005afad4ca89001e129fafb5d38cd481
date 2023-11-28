@@ -1,0 +1,20 @@
+package com.app;
+
+public class ReturnAndFinally {
+
+	public static void main(String[] args) {
+		
+		try {
+			System.out.println("Statement 1");
+			return;
+			
+		} catch (Exception e) {
+			System.out.println("Inside catch block");
+		}finally {
+			System.out.println("Inside finally block");
+			
+		}
+
+	}
+
+}
