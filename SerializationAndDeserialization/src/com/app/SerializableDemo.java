@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 class Dog implements Serializable {
+	private static final long serialVersionUID = 1L;
 	int i = 10;
 	int j = 20;
 	transient int a = 25;
@@ -26,12 +27,12 @@ public class SerializableDemo {
 		
 		
 		System.out.println("Deserialization started");
-		FileInputStream fis = new FileInputStream("abc.ser");
+		FileInputStream fis = new FileInputStream("abc.txt");
 		ObjectInputStream ois = new ObjectInputStream(fis);
 		Dog d2 = (Dog) ois.readObject();
 		System.out.println("Deserialization ended");
 		
 		
-		System.out.println(d2.i + "......" + d2.j + "...."+"......"+d2.a+ "..." + d2.k + "....." + d2.p);
+		System.out.println(d2.i + "......" + d2.j + "...."+"......"+d2.a+ "..." + d2.k + "....." + d2.p );
 	}
 }
